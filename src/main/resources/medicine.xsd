@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="medicine">
+	<xs:complexType>
+		<xs:sequence>
+
+		<xs:element name="name" type="xs:string"/>
+		
+		<xs:element name="pharm" type="xs:string"/>
+		
+		<xs:element name="group">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="antibiotics"/>
+					<xs:enumeration value="painkillers"/>
+					<xs:enumeration value="vitamins"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		
+		<xs:element name="analogs" type="xs:string"/>
+		
+		<xs:element name="versions">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="tablets"/>
+					<xs:enumeration value="capsules"/>
+					<xs:enumeration value="powder"/>
+					<xs:enumeration value="drops"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+
+		<xs:element name="certificate">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="certificate_number" type="xs:string"/>
+					<xs:element name="issue_date" type="xs:date"/>
+					<xs:element name="expiration_date" type="xs:date"/>
+					<xs:element name="org_registration" type="xs:string"/>             
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+
+		<xs:element name="package">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="type" type="xs:string"/>
+					<xs:element name="quantity">
+						<xs:simpleType>
+							<xs:restriction base="xs:integer">
+								<xs:minInclusive value="0"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="price">
+						<xs:simpleType>
+							<xs:restriction base="xs:decimal">
+								<xs:minInclusive value="0"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+
+		<xs:element name="dosage">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="quantity" type="xs:decimal"/>
+					<xs:element name="frequency" type="xs:string"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+</xs:schema>

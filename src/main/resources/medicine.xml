@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medicine>
+
+    <name>Copacyl</name>
+
+    <pharm>Pharm #1</pharm>
+
+    <group>painkillers</group>
+
+    <analogs>Copacyl2</analogs>
+
+    <versions>tablets</versions>
+
+    <certificate>
+        <certificate_number>123456</certificate_number>
+        <issue_date>2017-05-02</issue_date>
+        <expiration_date>2020-05-02</expiration_date>
+        <org_registration>Organization A</org_registration>
+    </certificate>
+
+    <package>
+        <type>Pack</type>
+        <quantity>20</quantity>
+        <price>185.00</price>
+    </package>
+
+    <dosage>
+        <quantity>1</quantity>
+        <frequency>1 pill in day</frequency>
+    </dosage>
+
+</medicine>
